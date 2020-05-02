@@ -23,7 +23,7 @@ class StatisticsUtilsTest {
 	}
 
 	@Test
-	fun getActiveAndCompletedStats_notCompleted_returnsFortySixty() {
+	fun getActiveAndCompletedStats_noCompleted_returnsFortySixty() {
 		val list = listOf(
 				Task(isCompleted = true),
 				Task(isCompleted = true),
