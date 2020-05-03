@@ -231,7 +231,7 @@ class TasksViewModel(private val tasksRepository: IDefaultTasksRepository) : Vie
 
     @Suppress("UNCHECKED_CAST")
     class TasksViewModelFactory (private val tasksRepository: IDefaultTasksRepository) : ViewModelProvider.NewInstanceFactory() {
-        override fun <T : ViewModel> create(modelClass: Class<T>) = (TasksViewModel(tasksRepository) as T)
+        override fun <T : ViewModel> create(modelClass: Class<T>) = TasksViewModel(tasksRepository) as T
     }
 
 }
