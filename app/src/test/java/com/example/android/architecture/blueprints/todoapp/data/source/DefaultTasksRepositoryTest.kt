@@ -43,6 +43,7 @@ class DefaultTasksRepositoryTest {
     /*
     * runBlockingTest: makes sure the code is run synchronously and immediately
     * makes coroutines run like non-coroutines. Only for testing.
+    * should be used only in test classes (never in main source set or in test doubles!)
     */
     fun getTasks_requestsAllTasksFromRemoteDataSource() = runBlockingTest {
         val tasks = tasksRepository.getTasks(forceUpdate = true) as Result.Success
